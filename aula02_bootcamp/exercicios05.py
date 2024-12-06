@@ -2,4 +2,4 @@
 
 n1 = float(input("Digite o um valor: "))
 
-print(n1 * n1) 
+print(n1 ** 2) 
