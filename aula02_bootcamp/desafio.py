@@ -13,6 +13,9 @@ try:
     elif any(char.isdigit() for char in nome):
         raise ValueError("O nome não deve conter números.")
         exit()
+    elif nome.isspace():
+        raise ValueError("O nome não pode conter apenas espaços.")
+        exit()
     else:
         print("Nome válido:", nome)
 except ValueError as e:
@@ -24,7 +27,7 @@ except ValueError as e:
 
 try:
     salario = float(input("Digite o valor do seu salário: "))
-    if salario < 0:
+    if salario <= 0:
         print("Por favor, digite um valor positivo para o salário.")
 except ValueError:
     print("Entrada inválida para o salário. Por favor, digite um número.")
@@ -36,7 +39,7 @@ except ValueError:
 
 try:
     bonus = float(input("Digite o valor do bônus recebido: "))
-    if bonus < 0:
+    if bonus <= 0:
         print("Por favor, digite um valor positivo para o bônus.")
 except ValueError:
     print("Entrada inválida para o bônus. Por favor, digite um número.")
